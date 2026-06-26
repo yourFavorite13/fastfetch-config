@@ -8,57 +8,112 @@
     "padding": {
       "right": 5,
       "left": 0,
-      "top": 0,
+      "top": 4,
       "bottom": 0
     }
-    // "color": {
-    //   "1": "",
-    //   "2": ""
-    // }
   },
-  "dispaly": {
-    "separator": "  ♡  ",
+  "display": {
     "color": {
-      "keys": "bright-yellow",
-      "title": "white"
+      "keys": "\u001b[38;2;250;208;44m",
+      "title": "white",
+      "separator": "\u001b[38;2;243;176;179m"
     },
+    "separator": "      ♡ ",
     "key": {
-      "width": 10,
-      "type": "string"
+      "width": 23
     },
     "bar": {
-      "width": 10,       // Width of percentage bars
-      "charElapsed": "■", // Character for elapsed portion
-      "charTotal": "-"   // Character for total portion
+      "width": 20,
+      "char":{
+        "elapsed": "♡ ",
+        "total": "-"
+      }
     },
     "percent": {
-      "type": 9,         // 1=number, 2=bar, 3=both, 9=colored number
+      // "type": 7, //only bar
+      "type": 1,
       "color": {
-          // "green": "green",
-          // "yellow": "light_yellow",
-          // "red": "light_red"
-        }
+        "color": "\u001b[38;2;250;208;44m"
+      } 
     }
   },
   "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "terminal",
-    "cpu",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
+    {
+      "type": "title",
+      "color": {
+        "host": "\u001b[38;2;248;249;250m",
+        "at": "\u001b[38;2;243;176;179m",
+        "user": "\u001b[38;2;250;208;44m"
+      }
+    },
     "break",
-    "colors"
+    // "separator",
+    {
+      "key": "OS    ",
+      "type": "os"
+    },
+    {
+      "key": "HOST  ",
+      "type": "host"
+    },  
+    {
+      "key": "Kernel",
+      "type": "kernel"
+    },
+    {
+      "key": "UpTime",
+      "type": "uptime"
+    },
+    {
+      "key": "PKG   ",
+      "type": "packages"
+    },
+    {
+      "key": "SH    ",
+      "type": "shell"
+    },
+    {
+      "key": "DP    ",
+      "type": "display"
+    },
+    {
+      "key": "DE    ",
+      "type": "de"
+    },
+    {
+      "key": "WM    ",
+      "type": "wm"
+    },
+    {
+      "key": "TERM  ",
+      "type": "terminal"
+    },
+    {
+      "key": "CPU   ",
+      "type": "cpu"
+    },
+    {
+      "key": "GPU   ",
+      "type": "gpu"
+    },
+    {
+      "key": "RAM   ",
+      "type": "memory"
+      // "percent": {
+      // // "type": 7, //only bar
+      // "type": 7,
+      // "color": {
+      //   "color": "\u001b[38;2;250;208;44m"
+      //   }
+      // }
+    },
+    {
+      "key": "SWAP  ",
+      "type": "swap"
+    },
+    {
+      "key": "DISK  ",
+      "type": "disk"
+    }
   ]
 }
